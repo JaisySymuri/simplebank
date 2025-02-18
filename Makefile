@@ -7,7 +7,7 @@ migratedown:
 sqlc:
 	@sqlc generate 
 
-test:
+tests:
 	@go test -v -cover ./...
 
-.PHONY: migrateup migratedown sqlc test
+.PHONY: migrateup migratedown sqlc tests
