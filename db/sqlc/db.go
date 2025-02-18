@@ -9,6 +9,7 @@ import (
 	"database/sql"
 )
 
+// DBTX is an interface that groups the ExecContext, PrepareContext, QueryContext, and QueryRowContext methods.
 type DBTX interface {
 	ExecContext(context.Context, string, ...interface{}) (sql.Result, error)
 	PrepareContext(context.Context, string) (*sql.Stmt, error)
